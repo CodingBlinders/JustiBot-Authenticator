@@ -6,8 +6,8 @@ const googleController = require('../controllers/googleController');
 router.get('/', googleController.googleAuth);
 
 router.get('/callback', passport.authenticate('google', {
-    successRedirect: '/',
-    failureRedirect: '/login'
+    successRedirect: 'https://justibot.codingblinders.com/',
+    failureRedirect: 'https://justibot.codingblinders.com/login'
   }));
 
 

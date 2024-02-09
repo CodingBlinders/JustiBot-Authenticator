@@ -96,7 +96,7 @@ app.post('/login/password', (req, res, next) => {
         }
         if (!user) {
             // Authentication failed, redirect to login page with error message
-            return res.redirect('/login?error=' + encodeURIComponent(info.message));
+            return res.status(401).json({ message: 'Failed to login' });
         }
         // Authentication successful, log in the user
         req.login(user, (err) => {
@@ -104,7 +104,7 @@ app.post('/login/password', (req, res, next) => {
                 return next(err);
             }
             // Redirect to the home page or any desired page upon successful login
-            return res.redirect('/');
+            return res.status(200).json({ message: 'Login Seccess' });
         });
     })(req, res, next);
 });
