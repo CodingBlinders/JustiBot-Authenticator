@@ -20,4 +20,4 @@ EXPOSE 3000
 COPY .env .env
 
 # Command to run the application
-CMD ["node", "app.js"]
+CMD ["node", "App.js"]
