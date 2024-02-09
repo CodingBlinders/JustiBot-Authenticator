@@ -1,0 +1,5 @@
+.idea
+.env
+psc-package.json
+output
+node_modules

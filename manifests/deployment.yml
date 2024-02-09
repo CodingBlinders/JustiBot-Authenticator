@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: codingblindersjustibotauth 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: codingblindersjustibotauth
+  template:
+    metadata:
+      labels:
+        app: codingblindersjustibotauth 
+    spec:
+      containers:
+        - name: codingblindersjustibotauth 
+          image: justibot.azurecr.io/codingblindersjustibotauth
+          ports:
+          - containerPort: 3000
